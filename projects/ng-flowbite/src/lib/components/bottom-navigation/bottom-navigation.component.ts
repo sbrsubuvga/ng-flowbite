@@ -1,12 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'ngf-bottom-navigation',
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div [id]="navigationId" [class]="navigationClasses">
+    <div [id]="navigationId" [ngClass]="getNavigationClasses()">
       <ng-content></ng-content>
     </div>
   `
@@ -15,27 +16,43 @@ export class NgfBottomNavigationComponent {
   @Input() navigationId = `bottom-nav-${Math.random().toString(36).substr(2, 9)}`;
   @Input() fixed = true;
 
-  get navigationClasses(): string {
-    const base = 'fixed z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600';
-    const positionClass = this.fixed ? 'bottom-0 left-0 right-0' : '';
-    return `${base} ${positionClass}`.trim();
+  getNavigationClasses(): { [key: string]: boolean } {
+    const baseClasses: { [key: string]: boolean } = {
+      'z-50': true,
+      'w-full': true,
+      'h-16': true,
+      'bg-white': true,
+      'border-t': true,
+      'border-gray-200': true,
+      'dark:bg-gray-700': true,
+      'dark:border-gray-600': true
+    };
+
+    if (this.fixed) {
+      baseClasses['fixed'] = true;
+      baseClasses['bottom-0'] = true;
+      baseClasses['left-0'] = true;
+      baseClasses['right-0'] = true;
+    }
+
+    return baseClasses;
   }
 }
 
 @Component({
   selector: 'ngf-bottom-nav-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   template: `
     <button
       type="button"
-      [class]="itemClasses"
-      (click)="onClick.emit()"
+      [ngClass]="getItemClasses()"
+      (click)="handleClick()"
       [attr.aria-label]="label"
     >
       <svg
         *ngIf="icon"
-        [class]="iconClasses"
+        [ngClass]="getIconClasses()"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
@@ -43,10 +60,10 @@ export class NgfBottomNavigationComponent {
       >
         <path [attr.d]="icon"></path>
       </svg>
-      <span *ngIf="label" [class]="labelClasses">{{ label }}</span>
+      <span *ngIf="label" [ngClass]="getLabelClasses()">{{ label }}</span>
       <span
         *ngIf="badge"
-        [class]="badgeClasses"
+        [ngClass]="getBadgeClasses()"
       >
         {{ badge }}
       </span>
@@ -58,26 +75,68 @@ export class NgfBottomNavItemComponent {
   @Input() icon?: string;
   @Input() badge?: string | number;
   @Input() active = false;
+  @Input() routerLink?: string;
   @Output() onClick = new EventEmitter<void>();
 
-  get itemClasses(): string {
-    const base = 'inline-flex flex-col items-center justify-center px-5 group';
-    const activeClass = this.active
-      ? 'text-blue-600 dark:text-blue-500'
-      : 'text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-500';
-    return `${base} ${activeClass}`.trim();
+  handleClick(): void {
+    this.onClick.emit();
   }
 
-  get iconClasses(): string {
-    return 'w-5 h-5 mb-1';
+  getItemClasses(): { [key: string]: boolean } {
+    const baseClasses: { [key: string]: boolean } = {
+      'inline-flex': true,
+      'flex-col': true,
+      'items-center': true,
+      'justify-center': true,
+      'px-5': true,
+      'group': true
+    };
+
+    if (this.active) {
+      baseClasses['text-blue-600'] = true;
+      baseClasses['dark:text-blue-500'] = true;
+    } else {
+      baseClasses['text-gray-500'] = true;
+      baseClasses['hover:text-gray-600'] = true;
+      baseClasses['dark:text-gray-400'] = true;
+      baseClasses['dark:hover:text-gray-500'] = true;
+    }
+
+    return baseClasses;
   }
 
-  get labelClasses(): string {
-    return 'text-xs';
+  getIconClasses(): { [key: string]: boolean } {
+    return {
+      'w-5': true,
+      'h-5': true,
+      'mb-1': true
+    };
   }
 
-  get badgeClasses(): string {
-    return 'inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-blue-600 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900';
+  getLabelClasses(): { [key: string]: boolean } {
+    return {
+      'text-xs': true
+    };
+  }
+
+  getBadgeClasses(): { [key: string]: boolean } {
+    return {
+      'inline-flex': true,
+      'items-center': true,
+      'justify-center': true,
+      'w-5': true,
+      'h-5': true,
+      'text-xs': true,
+      'font-bold': true,
+      'text-white': true,
+      'bg-blue-600': true,
+      'border-2': true,
+      'border-white': true,
+      'rounded-full': true,
+      '-top-2': true,
+      '-end-2': true,
+      'dark:border-gray-900': true
+    };
   }
 }
 
