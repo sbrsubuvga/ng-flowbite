@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/ng-flowbite.git"
+    "url": "git+https://github.com/sbrsubuvga/ng-flowbite.git"
   },
   "keywords": [
     "angular",
