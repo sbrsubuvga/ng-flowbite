@@ -1,0 +1,79 @@
+{
+  "name": "@ng-flowbite/ng-flowbite",
+  "version": "0.1.0",
+  "description": "Angular widgets built from the ground up using Flowbite (Tailwind CSS) with APIs designed for the Angular ecosystem",
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ng-flowbite.git"
+  },
+  "keywords": [
+    "angular",
+    "flowbite",
+    "tailwind",
+    "tailwindcss",
+    "components",
+    "ui",
+    "widgets",
+    "modal",
+    "dropdown",
+    "toast",
+    "alert",
+    "button",
+    "card",
+    "badge"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "@angular/core": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "flowbite": "^2.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.0.0",
+    "@angular/cli": "^19.0.0",
+    "@angular/compiler-cli": "^19.0.0",
+    "@angular/forms": "^19.0.0",
+    "@angular/platform-browser": "^19.0.0",
+    "@angular/platform-browser-dynamic": "^19.0.0",
+    "@angular/router": "^19.0.0",
+    "@types/jasmine": "^5.1.13",
+    "jasmine-core": "^5.13.0",
+    "karma": "^6.4.4",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage": "^2.2.1",
+    "karma-jasmine": "^5.1.0",
+    "karma-jasmine-html-reporter": "^2.1.0",
+    "ng-packagr": "^19.2.2",
+    "typescript": "~5.6.0",
+    "zone.js": "^0.15.0"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "ng build ng-flowbite",
+    "test": "ng test ng-flowbite",
+    "lint": "ng lint",
+    "demo": "ng serve demo",
+    "build:demo": "ng build demo"
+  },
+  "main": "dist/ng-flowbite/fesm2022/ng-flowbite.mjs",
+  "module": "dist/ng-flowbite/fesm2022/ng-flowbite.mjs",
+  "es2022": "dist/ng-flowbite/fesm2022/ng-flowbite.mjs",
+  "esm2022": "dist/ng-flowbite/esm2022/ng-flowbite.mjs",
+  "fesm2022": "dist/ng-flowbite/fesm2022/ng-flowbite.mjs",
+  "typings": "dist/ng-flowbite/index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./dist/ng-flowbite/index.d.ts",
+      "esm2022": "./dist/ng-flowbite/esm2022/ng-flowbite.mjs",
+      "es2022": "./dist/ng-flowbite/fesm2022/ng-flowbite.mjs",
+      "default": "./dist/ng-flowbite/fesm2022/ng-flowbite.mjs"
+    }
+  }
+}

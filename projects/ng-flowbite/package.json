@@ -1,0 +1,17 @@
+{
+  "name": "@ng-flowbite/ng-flowbite",
+  "version": "0.1.0",
+  "description": "Angular widgets built from the ground up using Flowbite (Tailwind CSS) with APIs designed for the Angular ecosystem",
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "@angular/core": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "flowbite": "^2.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
+

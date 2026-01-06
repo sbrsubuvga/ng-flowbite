@@ -1,0 +1,43 @@
+# Source files
+/src
+/projects
+*.ts
+!*.d.ts
+
+# Build files
+/out-tsc
+/dist
+/bazel-out
+
+# Test files
+*.spec.ts
+*.test.ts
+/e2e
+/test
+
+# Config files
+/.angular
+/.vscode
+/.idea
+*.log
+*.swp
+*.swo
+*~
+
+# Documentation
+/docs
+*.md
+!README.md
+
+# Misc
+.DS_Store
+Thumbs.db
+.editorconfig
+.gitignore
+.gitattributes
+.husky
+.yarn
+
+# CI
+.github
+
