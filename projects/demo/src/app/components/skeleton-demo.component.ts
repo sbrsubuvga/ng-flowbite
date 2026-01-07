@@ -19,15 +19,18 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default skeleton</h2>
           <p class="text-gray-400 mb-4">Use the default skeleton component to show loading states.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default skeleton"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/skeleton/skeleton.component.ts"
+          >
             <div class="space-y-4">
               <ngf-skeleton type="text" width="100%"></ngf-skeleton>
               <ngf-skeleton type="text" width="80%"></ngf-skeleton>
               <ngf-skeleton type="avatar" width="40px" height="40px"></ngf-skeleton>
               <ngf-skeleton type="button" width="120px"></ngf-skeleton>
             </div>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

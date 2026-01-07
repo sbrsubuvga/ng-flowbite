@@ -75,10 +75,13 @@ import { NgfModalService, NgfActiveModal } from '@ng-flowbite/ng-flowbite';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default modal</h2>
             <p class="text-gray-400 mb-4">Use the modal service to open modal dialogs programmatically.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default modal"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/modal/modal.component.ts"
+            >
               <ngf-button color="blue" (onClick)="openModal()">Open Modal</ngf-button>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -102,9 +105,12 @@ import { NgfModalService, NgfActiveModal } from '@ng-flowbite/ng-flowbite';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the modal service to open modal dialogs programmatically.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default modal"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/modal/modal.component.ts"
+          >
             <ngf-button color="blue" (onClick)="openModal()">Open Modal</ngf-button>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">modal-default.ts</span>

@@ -19,15 +19,18 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default list group</h2>
           <p class="text-gray-400 mb-4">Use the default list group component to show a list of items.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default list group"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/list-group/list-group.component.ts"
+          >
             <ngf-list-group>
               <ngf-list-group-item [active]="true">Profile</ngf-list-group-item>
               <ngf-list-group-item>Settings</ngf-list-group-item>
               <ngf-list-group-item>Messages</ngf-list-group-item>
               <ngf-list-group-item>Download</ngf-list-group-item>
             </ngf-list-group>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

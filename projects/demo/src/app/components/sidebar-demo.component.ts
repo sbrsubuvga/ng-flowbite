@@ -19,15 +19,20 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default sidebar</h2>
           <p class="text-gray-400 mb-4">Use the default sidebar component to show navigation.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <ngf-sidebar [overlay]="false" position="left">
-              <ul class="space-y-2 font-medium">
-                <li><a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Dashboard</a></li>
-                <li><a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Settings</a></li>
-              </ul>
-            </ngf-sidebar>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          <app-demo-wrapper
+            componentName="Default sidebar"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/sidebar/sidebar.component.ts"
+          >
+            <div style="height: 400px; transform: translate(0);">
+              <ngf-sidebar [overlay]="false" position="left">
+                <ul class="space-y-2 font-medium">
+                  <li><a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Dashboard</a></li>
+                  <li><a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Settings</a></li>
+                </ul>
+              </ngf-sidebar>
+            </div>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

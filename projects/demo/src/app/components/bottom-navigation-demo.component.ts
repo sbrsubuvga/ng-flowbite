@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
 
       <!-- Main Heading -->
       <h1 class="text-4xl font-bold text-white mb-2">Bottom Navigation</h1>
-      <p class="text-xl text-gray-400 mb-8">Use the bottom navigation component to show navigation items at the bottom of the screen, typically on mobile devices.</p>
+      <p class="text-xl text-gray-400 mb-8">Use the bottom navigation component to show navigation items at the bottom of the screen.</p>
 
       <!-- Tabs -->
       <div class="border-b border-gray-700 mb-6">
@@ -50,18 +50,16 @@ import { Component } from '@angular/core';
       <div *ngIf="activeTab === 'overview'" class="space-y-6">
         <div class="prose prose-invert max-w-none">
           <p class="text-gray-300 leading-relaxed">
-            The bottom navigation component is used to display navigation items at the bottom of the screen, typically on mobile devices. It supports icons, labels, badges, and active states.
+            The bottom navigation component is used to display navigation items at the bottom of the screen, typically on mobile devices. It supports icons, labels, and active states.
           </p>
           
           <h2 class="text-2xl font-bold text-white mt-8 mb-4">Features</h2>
           <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4">
             <li>Icon and label support</li>
             <li>Active state indication</li>
-            <li>Badge support for notifications</li>
             <li>Fixed position at bottom of screen</li>
             <li>Mobile-friendly design</li>
             <li>Dark mode support</li>
-            <li>Accessible with ARIA attributes</li>
           </ul>
         </div>
 
@@ -70,29 +68,21 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default bottom navigation</h2>
             <p class="text-gray-400 mb-4">Use the default bottom navigation component to show navigation items.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 relative" style="min-height: 100px;">
+            <app-demo-wrapper
+              componentName="Default Bottom Navigation"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/bottom-navigation/bottom-navigation.component.ts"
+              [padding]="false"
+            >
+              <div class="h-64 bg-gray-100 dark:bg-gray-900 w-full flex items-center justify-center text-gray-400">
+                Content Area
+              </div>
               <ngf-bottom-navigation>
-                <ngf-bottom-nav-item [active]="true" label="Home" [icon]="homeIcon"></ngf-bottom-nav-item>
-                <ngf-bottom-nav-item label="Settings" [icon]="settingsIcon"></ngf-bottom-nav-item>
-                <ngf-bottom-nav-item label="Profile" [icon]="userIcon"></ngf-bottom-nav-item>
+                <ngf-bottom-nav-item [active]="activeItem === 'home'" (click)="activeItem = 'home'" label="Home" icon="home"></ngf-bottom-nav-item>
+                <ngf-bottom-nav-item [active]="activeItem === 'settings'" (click)="activeItem = 'settings'" label="Settings" icon="settings"></ngf-bottom-nav-item>
+                <ngf-bottom-nav-item [active]="activeItem === 'profile'" (click)="activeItem = 'profile'" label="Profile" icon="user"></ngf-bottom-nav-item>
               </ngf-bottom-navigation>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
-          </section>
-
-          <!-- Bottom Navigation with Badges -->
-          <section id="badges">
-            <h2 class="text-2xl font-bold text-white mb-4">Bottom navigation with badges</h2>
-            <p class="text-gray-400 mb-4">Add badges to navigation items to show notifications or counts.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 relative" style="min-height: 100px;">
-              <ngf-bottom-navigation>
-                <ngf-bottom-nav-item [active]="true" label="Home" [icon]="homeIcon"></ngf-bottom-nav-item>
-                <ngf-bottom-nav-item label="Messages" [icon]="messageIcon" badge="5"></ngf-bottom-nav-item>
-                <ngf-bottom-nav-item label="Notifications" [icon]="bellIcon" badge="12"></ngf-bottom-nav-item>
-                <ngf-bottom-nav-item label="Profile" [icon]="userIcon"></ngf-bottom-nav-item>
-              </ngf-bottom-navigation>
-            </div>
-            <app-code-example [code]="badgesCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -116,13 +106,20 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default bottom navigation component to show navigation items.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 relative" style="min-height: 100px;">
+          <app-demo-wrapper
+            componentName="Default Bottom Navigation"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/bottom-navigation/bottom-navigation.component.ts"
+            [padding]="false"
+          >
+            <div class="h-64 bg-gray-100 dark:bg-gray-900 w-full flex items-center justify-center text-gray-400">
+              Content Area
+            </div>
             <ngf-bottom-navigation>
-              <ngf-bottom-nav-item [active]="true" label="Home" [icon]="homeIcon"></ngf-bottom-nav-item>
-              <ngf-bottom-nav-item label="Settings" [icon]="settingsIcon"></ngf-bottom-nav-item>
-              <ngf-bottom-nav-item label="Profile" [icon]="userIcon"></ngf-bottom-nav-item>
+              <ngf-bottom-nav-item [active]="activeItem === 'home'" (click)="activeItem = 'home'" label="Home" icon="home"></ngf-bottom-nav-item>
+              <ngf-bottom-nav-item [active]="activeItem === 'settings'" (click)="activeItem = 'settings'" label="Settings" icon="settings"></ngf-bottom-nav-item>
+              <ngf-bottom-nav-item [active]="activeItem === 'profile'" (click)="activeItem = 'profile'" label="Profile" icon="user"></ngf-bottom-nav-item>
             </ngf-bottom-navigation>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">bottom-navigation-default.html</span>
@@ -141,50 +138,6 @@ import { Component } from '@angular/core';
             </div>
           </div>
         </section>
-
-        <!-- Bottom Navigation with Badges -->
-        <section id="badges">
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-2xl font-bold text-white">Bottom navigation with badges</h2>
-            <button
-              (click)="showBadgesCode = !showBadgesCode"
-              [class.bg-blue-600]="showBadgesCode"
-              [class.bg-gray-700]="!showBadgesCode"
-              class="px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-blue-700 transition-colors flex items-center gap-2"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-              </svg>
-              Code
-            </button>
-          </div>
-          <p class="text-gray-400 mb-4">Add badges to navigation items to show notifications or counts.</p>
-          <div *ngIf="!showBadgesCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 relative" style="min-height: 100px;">
-            <ngf-bottom-navigation>
-              <ngf-bottom-nav-item [active]="true" label="Home" [icon]="homeIcon"></ngf-bottom-nav-item>
-              <ngf-bottom-nav-item label="Messages" [icon]="messageIcon" badge="5"></ngf-bottom-nav-item>
-              <ngf-bottom-nav-item label="Notifications" [icon]="bellIcon" badge="12"></ngf-bottom-nav-item>
-              <ngf-bottom-nav-item label="Profile" [icon]="userIcon"></ngf-bottom-nav-item>
-            </ngf-bottom-navigation>
-          </div>
-          <div *ngIf="showBadgesCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
-              <span class="text-sm font-medium text-gray-300">bottom-navigation-badges.html</span>
-              <button
-                (click)="copyToClipboard(badgesCode)"
-                class="text-gray-400 hover:text-white transition-colors"
-                title="Copy code"
-              >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                </svg>
-              </button>
-            </div>
-            <div class="p-4 overflow-x-auto">
-              <pre class="text-sm text-gray-300 font-mono"><code [innerHTML]="formatCode(badgesCode)"></code></pre>
-            </div>
-          </div>
-        </section>
       </div>
 
       <!-- API Tab -->
@@ -197,34 +150,6 @@ import { Component } from '@angular/core';
           <h3 class="text-xl font-semibold text-white mb-3">Selector</h3>
           <div class="bg-gray-800 rounded-lg p-4 mb-6">
             <code class="text-blue-400">ngf-bottom-navigation</code>
-          </div>
-
-          <h3 class="text-xl font-semibold text-white mb-3">Inputs</h3>
-          <div class="overflow-x-auto mb-6">
-            <table class="min-w-full divide-y divide-gray-700">
-              <thead class="bg-gray-800">
-                <tr>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Property</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Type</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Default</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Description</th>
-                </tr>
-              </thead>
-              <tbody class="bg-gray-900 divide-y divide-gray-700">
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">navigationId</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">string</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">auto-generated</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">Unique identifier for the navigation</td>
-                </tr>
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">fixed</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">boolean</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">true</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">Whether the navigation is fixed at the bottom</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </section>
 
@@ -260,13 +185,7 @@ import { Component } from '@angular/core';
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">icon</code></td>
                   <td class="px-6 py-4 text-sm text-gray-300">string</td>
                   <td class="px-6 py-4 text-sm text-gray-300">-</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">SVG path data for the icon</td>
-                </tr>
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">badge</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">string | number</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">-</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">Badge value to display (notification count)</td>
+                  <td class="px-6 py-4 text-sm text-gray-300">Icon name for the navigation item</td>
                 </tr>
                 <tr>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">active</code></td>
@@ -283,26 +202,6 @@ import { Component } from '@angular/core';
               </tbody>
             </table>
           </div>
-
-          <h3 class="text-xl font-semibold text-white mb-3">Outputs</h3>
-          <div class="overflow-x-auto mb-6">
-            <table class="min-w-full divide-y divide-gray-700">
-              <thead class="bg-gray-800">
-                <tr>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Event</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Type</th>
-                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Description</th>
-                </tr>
-              </thead>
-              <tbody class="bg-gray-900 divide-y divide-gray-700">
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">onClick</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">EventEmitter&lt;void&gt;</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">Emitted when the item is clicked</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </section>
       </div>
     </div>
@@ -312,27 +211,14 @@ import { Component } from '@angular/core';
 export class BottomNavigationDemoComponent {
   activeTab: 'overview' | 'examples' | 'api' = 'overview';
   showDefaultCode = false;
-  showBadgesCode = false;
-
-  // SVG icon paths
-  homeIcon = 'M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z';
-  settingsIcon = 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z';
-  userIcon = 'M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z';
-  messageIcon = 'M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z';
-  bellIcon = 'M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z';
 
   defaultCode = `<ngf-bottom-navigation>
-  <ngf-bottom-nav-item [active]="true" label="Home" [icon]="homeIcon"></ngf-bottom-nav-item>
-  <ngf-bottom-nav-item label="Settings" [icon]="settingsIcon"></ngf-bottom-nav-item>
-  <ngf-bottom-nav-item label="Profile" [icon]="userIcon"></ngf-bottom-nav-item>
+  <ngf-bottom-nav-item [active]="activeItem === 'home'" (click)="activeItem = 'home'" label="Home" icon="home"></ngf-bottom-nav-item>
+  <ngf-bottom-nav-item [active]="activeItem === 'settings'" (click)="activeItem = 'settings'" label="Settings" icon="settings"></ngf-bottom-nav-item>
+  <ngf-bottom-nav-item [active]="activeItem === 'profile'" (click)="activeItem = 'profile'" label="Profile" icon="user"></ngf-bottom-nav-item>
 </ngf-bottom-navigation>`;
 
-  badgesCode = `<ngf-bottom-navigation>
-  <ngf-bottom-nav-item [active]="true" label="Home" [icon]="homeIcon"></ngf-bottom-nav-item>
-  <ngf-bottom-nav-item label="Messages" [icon]="messageIcon" badge="5"></ngf-bottom-nav-item>
-  <ngf-bottom-nav-item label="Notifications" [icon]="bellIcon" badge="12"></ngf-bottom-nav-item>
-  <ngf-bottom-nav-item label="Profile" [icon]="userIcon"></ngf-bottom-nav-item>
-</ngf-bottom-navigation>`;
+  activeItem = 'home';
 
   formatCode(code: string): string {
     return code

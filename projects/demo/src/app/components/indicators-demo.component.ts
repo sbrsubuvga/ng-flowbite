@@ -19,7 +19,10 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default indicator</h2>
           <p class="text-gray-400 mb-4">Use the default indicator component to show badges.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default indicator"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/indicator/indicator.component.ts"
+          >
             <div class="flex gap-4 items-center">
               <div class="relative">
                 <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Avatar" class="w-12 h-12 rounded-full">
@@ -30,8 +33,8 @@ import { Component } from '@angular/core';
                 <ngf-indicator position="top-right" color="red">3</ngf-indicator>
               </div>
             </div>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

@@ -19,7 +19,10 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default KBD</h2>
           <p class="text-gray-400 mb-4">Use the default KBD component to show keyboard keys.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default KBD"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/kbd/kbd.component.ts"
+          >
             <div class="flex flex-wrap gap-2 items-center">
               <p class="text-gray-300">Press <ngf-kbd>Ctrl</ngf-kbd> + <ngf-kbd>K</ngf-kbd> to open search</p>
               <ngf-kbd-group>
@@ -28,8 +31,8 @@ import { Component } from '@angular/core';
                 <ngf-kbd>K</ngf-kbd>
               </ngf-kbd-group>
             </div>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

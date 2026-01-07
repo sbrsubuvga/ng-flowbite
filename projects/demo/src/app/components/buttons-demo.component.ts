@@ -71,7 +71,10 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default button</h2>
             <p class="text-gray-400 mb-4">Use the default button styles with multiple colors to indicate an action or link within your website.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default button"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/button/button.component.ts"
+            >
               <div class="flex flex-wrap gap-4">
                 <ngf-button color="blue">Blue</ngf-button>
                 <ngf-button color="gray">Gray</ngf-button>
@@ -81,15 +84,18 @@ import { Component } from '@angular/core';
                 <ngf-button color="purple">Purple</ngf-button>
                 <ngf-button color="pink">Pink</ngf-button>
               </div>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Outline Buttons -->
           <section id="outline">
             <h2 class="text-2xl font-bold text-white mb-4">Outline buttons</h2>
             <p class="text-gray-400 mb-4">Use the outline prop to show a button with an outline style.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Outline buttons"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/button/button.component.ts"
+            >
               <div class="flex flex-wrap gap-4">
                 <ngf-button color="blue" [outline]="true">Blue</ngf-button>
                 <ngf-button color="gray" [outline]="true">Gray</ngf-button>
@@ -99,15 +105,18 @@ import { Component } from '@angular/core';
                 <ngf-button color="purple" [outline]="true">Purple</ngf-button>
                 <ngf-button color="pink" [outline]="true">Pink</ngf-button>
               </div>
-            </div>
-            <app-code-example [code]="outlineCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="outlineCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Button Sizes -->
           <section id="sizes">
             <h2 class="text-2xl font-bold text-white mb-4">Button sizes</h2>
             <p class="text-gray-400 mb-4">Use the size prop to change the size of the button.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Button sizes"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/button/button.component.ts"
+            >
               <div class="flex flex-wrap items-center gap-4">
                 <ngf-button color="blue" size="xs">Extra small</ngf-button>
                 <ngf-button color="blue" size="sm">Small</ngf-button>
@@ -115,21 +124,24 @@ import { Component } from '@angular/core';
                 <ngf-button color="blue" size="lg">Large</ngf-button>
                 <ngf-button color="blue" size="xl">Extra large</ngf-button>
               </div>
-            </div>
-            <app-code-example [code]="sizesCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="sizesCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Disabled State -->
           <section id="disabled">
             <h2 class="text-2xl font-bold text-white mb-4">Disabled state</h2>
             <p class="text-gray-400 mb-4">Use the disabled prop to disable a button.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Disabled state"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/button/button.component.ts"
+            >
               <div class="flex flex-wrap gap-4">
                 <ngf-button color="blue" [disabled]="true">Disabled</ngf-button>
                 <ngf-button color="gray" [disabled]="true">Disabled</ngf-button>
               </div>
-            </div>
-            <app-code-example [code]="disabledCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="disabledCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -153,7 +165,10 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default button styles with multiple colors to indicate an action or link within your website.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default button"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/button/button.component.ts"
+          >
             <div class="flex flex-wrap gap-4">
               <ngf-button color="blue">Blue</ngf-button>
               <ngf-button color="gray">Gray</ngf-button>
@@ -163,7 +178,7 @@ import { Component } from '@angular/core';
               <ngf-button color="purple">Purple</ngf-button>
               <ngf-button color="pink">Pink</ngf-button>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">button-default.html</span>
@@ -200,7 +215,10 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the outline prop to show a button with an outline style.</p>
-          <div *ngIf="!showOutlineCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Outline buttons"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/button/button.component.ts"
+          >
             <div class="flex flex-wrap gap-4">
               <ngf-button color="blue" [outline]="true">Blue</ngf-button>
               <ngf-button color="gray" [outline]="true">Gray</ngf-button>
@@ -210,7 +228,7 @@ import { Component } from '@angular/core';
               <ngf-button color="purple" [outline]="true">Purple</ngf-button>
               <ngf-button color="pink" [outline]="true">Pink</ngf-button>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showOutlineCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">button-outline.html</span>
@@ -247,7 +265,10 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the size prop to change the size of the button.</p>
-          <div *ngIf="!showSizesCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Button sizes"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/button/button.component.ts"
+          >
             <div class="flex flex-wrap items-center gap-4">
               <ngf-button color="blue" size="xs">Extra small</ngf-button>
               <ngf-button color="blue" size="sm">Small</ngf-button>
@@ -255,7 +276,7 @@ import { Component } from '@angular/core';
               <ngf-button color="blue" size="lg">Large</ngf-button>
               <ngf-button color="blue" size="xl">Extra large</ngf-button>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showSizesCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">button-sizes.html</span>
@@ -292,12 +313,15 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the disabled prop to disable a button.</p>
-          <div *ngIf="!showDisabledCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Disabled state"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/button/button.component.ts"
+          >
             <div class="flex flex-wrap gap-4">
               <ngf-button color="blue" [disabled]="true">Disabled</ngf-button>
               <ngf-button color="gray" [disabled]="true">Disabled</ngf-button>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDisabledCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">button-disabled.html</span>

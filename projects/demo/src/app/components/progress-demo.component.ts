@@ -68,25 +68,35 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default progress</h2>
             <p class="text-gray-400 mb-4">Use the default progress component to show completion status.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4">
-              <ngf-progress [value]="45" color="blue"></ngf-progress>
-              <ngf-progress [value]="65" color="green"></ngf-progress>
-              <ngf-progress [value]="30" color="red"></ngf-progress>
-              <ngf-progress [value]="80" color="yellow"></ngf-progress>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            <app-demo-wrapper
+              componentName="Default progress"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/progress/progress.component.ts"
+            >
+              <div class="space-y-4">
+                <ngf-progress [value]="45" color="blue"></ngf-progress>
+                <ngf-progress [value]="65" color="green"></ngf-progress>
+                <ngf-progress [value]="30" color="red"></ngf-progress>
+                <ngf-progress [value]="80" color="yellow"></ngf-progress>
+              </div>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Progress Sizes -->
           <section id="sizes">
             <h2 class="text-2xl font-bold text-white mb-4">Progress sizes</h2>
             <p class="text-gray-400 mb-4">Use the size prop to change the size of the progress bar.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4">
-              <ngf-progress [value]="50" size="sm"></ngf-progress>
-              <ngf-progress [value]="50" size="md"></ngf-progress>
-              <ngf-progress [value]="50" size="lg"></ngf-progress>
-            </div>
-            <app-code-example [code]="sizesCode"></app-code-example>
+            <app-demo-wrapper
+              componentName="Progress sizes"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/progress/progress.component.ts"
+            >
+              <div class="space-y-4">
+                <ngf-progress [value]="50" size="sm"></ngf-progress>
+                <ngf-progress [value]="50" size="md"></ngf-progress>
+                <ngf-progress [value]="50" size="lg"></ngf-progress>
+              </div>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="sizesCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -110,12 +120,17 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default progress component to show completion status.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4">
-            <ngf-progress [value]="45" color="blue"></ngf-progress>
-            <ngf-progress [value]="65" color="green"></ngf-progress>
-            <ngf-progress [value]="30" color="red"></ngf-progress>
-            <ngf-progress [value]="80" color="yellow"></ngf-progress>
-          </div>
+          <app-demo-wrapper
+            componentName="Default progress"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/progress/progress.component.ts"
+          >
+            <div class="space-y-4">
+              <ngf-progress [value]="45" color="blue"></ngf-progress>
+              <ngf-progress [value]="65" color="green"></ngf-progress>
+              <ngf-progress [value]="30" color="red"></ngf-progress>
+              <ngf-progress [value]="80" color="yellow"></ngf-progress>
+            </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">progress-default.html</span>
@@ -152,11 +167,16 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the size prop to change the size of the progress bar.</p>
-          <div *ngIf="!showSizesCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4">
-            <ngf-progress [value]="50" size="sm"></ngf-progress>
-            <ngf-progress [value]="50" size="md"></ngf-progress>
-            <ngf-progress [value]="50" size="lg"></ngf-progress>
-          </div>
+          <app-demo-wrapper
+            componentName="Progress sizes"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/progress/progress.component.ts"
+          >
+            <div class="space-y-4">
+              <ngf-progress [value]="50" size="sm"></ngf-progress>
+              <ngf-progress [value]="50" size="md"></ngf-progress>
+              <ngf-progress [value]="50" size="lg"></ngf-progress>
+            </div>
+          </app-demo-wrapper>
           <div *ngIf="showSizesCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">progress-sizes.html</span>

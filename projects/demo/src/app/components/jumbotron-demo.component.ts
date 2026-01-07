@@ -19,7 +19,10 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default jumbotron</h2>
           <p class="text-gray-400 mb-4">Use the default jumbotron component to show a hero section.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default jumbotron"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/jumbotron/jumbotron.component.ts"
+          >
             <ngf-jumbotron 
               title="We invest in the world's potential"
               description="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value."
@@ -29,8 +32,8 @@ import { Component } from '@angular/core';
                 <ngf-button color="gray" [outline]="true">Learn more</ngf-button>
               </div>
             </ngf-jumbotron>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

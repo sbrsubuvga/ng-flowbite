@@ -19,12 +19,15 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default device mockup</h2>
           <p class="text-gray-400 mb-4">Use the default device mockup component to show device frames.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default device mockup"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/device-mockup/device-mockup.component.ts"
+          >
             <ngf-device-mockup type="iphone" orientation="portrait">
               <img src="https://flowbite.com/docs/images/device-mockups/iphone.png" alt="iPhone mockup" class="w-full h-auto">
             </ngf-device-mockup>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

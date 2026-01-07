@@ -71,7 +71,10 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default alert</h2>
             <p class="text-gray-400 mb-4">Use the following alert components to show messages to your users.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default Alert"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+            >
               <div class="space-y-4">
                 <ngf-alert color="default" [showIcon]="false">
                   <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
@@ -92,15 +95,18 @@ import { Component } from '@angular/core';
                   <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
                 </ngf-alert>
               </div>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Alert with Icon -->
           <section id="icon">
             <h2 class="text-2xl font-bold text-white mb-4">Alert with icon</h2>
             <p class="text-gray-400 mb-4">Alerts can include icons to provide visual context.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Alert with Icon"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+            >
               <div class="space-y-4">
                 <ngf-alert color="default">
                   <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
@@ -121,15 +127,18 @@ import { Component } from '@angular/core';
                   <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
                 </ngf-alert>
               </div>
-            </div>
-            <app-code-example [code]="iconCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="iconCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Bordered Alert -->
           <section id="border">
             <h2 class="text-2xl font-bold text-white mb-4">Bordered alert</h2>
             <p class="text-gray-400 mb-4">Add a border to the alert component using the border prop.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Bordered Alert"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+            >
               <div class="space-y-4">
                 <ngf-alert color="default" [border]="true" [showIcon]="false">
                   <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
@@ -150,15 +159,18 @@ import { Component } from '@angular/core';
                   <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
                 </ngf-alert>
               </div>
-            </div>
-            <app-code-example [code]="borderCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="borderCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Dismissible Alerts -->
           <section id="dismissible">
             <h2 class="text-2xl font-bold text-white mb-4">Dismissible alerts</h2>
             <p class="text-gray-400 mb-4">Use the dismissible prop to add a close button to the alert component.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Dismissible Alert"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+            >
               <div class="space-y-4">
                 <ngf-alert color="default" [dismissible]="true" (onDismiss)="onDismiss()">
                   <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
@@ -179,15 +191,18 @@ import { Component } from '@angular/core';
                   <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
                 </ngf-alert>
               </div>
-            </div>
-            <app-code-example [code]="dismissibleCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="dismissibleCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Border Accent -->
           <section id="border-accent">
             <h2 class="text-2xl font-bold text-white mb-4">Border accent</h2>
             <p class="text-gray-400 mb-4">Add an accent border (top border) to the alert using the accent prop along with border.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Border Accent"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+            >
               <div class="space-y-4">
                 <ngf-alert color="default" [border]="true" [accent]="true" [showIcon]="false">
                   <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
@@ -208,8 +223,8 @@ import { Component } from '@angular/core';
                   <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
                 </ngf-alert>
               </div>
-            </div>
-            <app-code-example [code]="borderAccentCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="borderAccentCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -233,8 +248,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the following alert components to show messages to your users.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="space-y-4">
+          <app-demo-wrapper
+            componentName="Default Alert"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+          >
+            <div *ngIf="!showDefaultCode" class="space-y-4">
               <ngf-alert color="default" [showIcon]="false">
                 <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
@@ -254,7 +272,7 @@ import { Component } from '@angular/core';
                 <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">alert-default.html</span>
@@ -291,8 +309,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Alerts can include icons to provide visual context.</p>
-          <div *ngIf="!showIconCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="space-y-4">
+          <app-demo-wrapper
+            componentName="Alert with Icon"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+          >
+            <div *ngIf="!showIconCode" class="space-y-4">
               <ngf-alert color="default">
                 <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
@@ -312,7 +333,7 @@ import { Component } from '@angular/core';
                 <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showIconCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">alert-icon.html</span>
@@ -349,8 +370,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Add a border to the alert component using the border prop.</p>
-          <div *ngIf="!showBorderCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="space-y-4">
+          <app-demo-wrapper
+            componentName="Bordered Alert"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+          >
+            <div *ngIf="!showBorderCode" class="space-y-4">
               <ngf-alert color="default" [border]="true" [showIcon]="false">
                 <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
@@ -370,7 +394,7 @@ import { Component } from '@angular/core';
                 <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showBorderCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">alert-border.html</span>
@@ -407,8 +431,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the dismissible prop to add a close button to the alert component.</p>
-          <div *ngIf="!showDismissibleCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="space-y-4">
+          <app-demo-wrapper
+            componentName="Dismissible Alert"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+          >
+            <div *ngIf="!showDismissibleCode" class="space-y-4">
               <ngf-alert color="default" [dismissible]="true" (onDismiss)="onDismiss()">
                 <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
@@ -428,7 +455,7 @@ import { Component } from '@angular/core';
                 <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDismissibleCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">alert-dismissible.html</span>
@@ -465,8 +492,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Add an accent border (top border) to the alert using the accent prop along with border.</p>
-          <div *ngIf="!showBorderAccentCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="space-y-4">
+          <app-demo-wrapper
+            componentName="Border Accent"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/alert/alert.component.ts"
+          >
+            <div *ngIf="!showBorderAccentCode" class="space-y-4">
               <ngf-alert color="default" [border]="true" [accent]="true" [showIcon]="false">
                 <span class="font-medium">default alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
@@ -486,7 +516,7 @@ import { Component } from '@angular/core';
                 <span class="font-medium">primary alert!</span> Change a few things up and try submitting again.
               </ngf-alert>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showBorderAccentCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">alert-border-accent.html</span>

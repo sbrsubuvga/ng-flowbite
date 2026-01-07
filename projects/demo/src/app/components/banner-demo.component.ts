@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
 
       <!-- Main Heading -->
       <h1 class="text-4xl font-bold text-white mb-2">Banner</h1>
-      <p class="text-xl text-gray-400 mb-8">Use the banner component to show important announcements or messages at the top or bottom of the page.</p>
+      <p class="text-xl text-gray-400 mb-8">Use the banner component to show important announcements or messages at the top of the page.</p>
 
       <!-- Tabs -->
       <div class="border-b border-gray-700 mb-6">
@@ -50,16 +50,14 @@ import { Component } from '@angular/core';
       <div *ngIf="activeTab === 'overview'" class="space-y-6">
         <div class="prose prose-invert max-w-none">
           <p class="text-gray-300 leading-relaxed">
-            The banner component is used to display important announcements or messages at the top or bottom of the page. It supports multiple color variants and can be dismissible.
+            The banner component is used to display important announcements or messages at the top of the page. It supports multiple color variants and can be dismissible.
           </p>
           
           <h2 class="text-2xl font-bold text-white mt-8 mb-4">Features</h2>
           <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4">
-            <li>Multiple color variants: blue, green, red, yellow, purple, pink</li>
-            <li>Top or bottom positioning</li>
+            <li>Multiple color variants</li>
             <li>Optional dismissible functionality</li>
-            <li>Optional icon display</li>
-            <li>Fixed position at top or bottom of viewport</li>
+            <li>Positioned at the top of the page</li>
             <li>Dark mode support</li>
             <li>Accessible with ARIA attributes</li>
           </ul>
@@ -70,48 +68,22 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default banner</h2>
             <p class="text-gray-400 mb-4">Use the default banner component to show announcements.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 relative" style="min-height: 80px;">
-              <ngf-banner color="blue" [dismissible]="true" position="top">
+            <app-demo-wrapper
+              componentName="Default Banner"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/banner/banner.component.ts"
+              [padding]="false"
+            >
+              <ngf-banner *ngIf="isBannerVisible" color="blue" [dismissible]="true" (onDismiss)="onDismiss()">
                 New features are now available! Check out what's new.
               </ngf-banner>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
+            
+            <div class="mt-4 flex justify-end">
+                <button *ngIf="!isBannerVisible" (click)="isBannerVisible = true" class="text-sm text-blue-500 hover:text-blue-400">
+                    Reset Banner
+                </button>
             </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
-          </section>
-
-          <!-- Banner Colors -->
-          <section id="colors">
-            <h2 class="text-2xl font-bold text-white mb-4">Banner colors</h2>
-            <p class="text-gray-400 mb-4">Banners with different color variants.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4 relative" style="min-height: 300px;">
-              <ngf-banner color="blue" [dismissible]="true" position="top">
-                Blue banner with important information.
-              </ngf-banner>
-              <ngf-banner color="green" [dismissible]="true" position="top">
-                Green banner for success messages.
-              </ngf-banner>
-              <ngf-banner color="red" [dismissible]="true" position="top">
-                Red banner for error messages.
-              </ngf-banner>
-              <ngf-banner color="yellow" [dismissible]="true" position="top">
-                Yellow banner for warnings.
-              </ngf-banner>
-            </div>
-            <app-code-example [code]="colorsCode"></app-code-example>
-          </section>
-
-          <!-- Banner Positions -->
-          <section id="positions">
-            <h2 class="text-2xl font-bold text-white mb-4">Banner positions</h2>
-            <p class="text-gray-400 mb-4">Banners can be positioned at the top or bottom of the page.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4 relative" style="min-height: 200px;">
-              <ngf-banner color="blue" [dismissible]="true" position="top">
-                Top banner example.
-              </ngf-banner>
-              <ngf-banner color="green" [dismissible]="true" position="bottom">
-                Bottom banner example.
-              </ngf-banner>
-            </div>
-            <app-code-example [code]="positionsCode"></app-code-example>
           </section>
         </div>
       </div>
@@ -135,11 +107,15 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default banner component to show announcements.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 relative" style="min-height: 80px;">
-            <ngf-banner color="blue" [dismissible]="true" position="top">
+          <app-demo-wrapper
+            componentName="Default Banner"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/banner/banner.component.ts"
+            [padding]="false"
+          >
+            <ngf-banner *ngIf="isBannerVisible" color="blue" [dismissible]="true" (onDismiss)="onDismiss()">
               New features are now available! Check out what's new.
             </ngf-banner>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">banner-default.html</span>
@@ -155,100 +131,6 @@ import { Component } from '@angular/core';
             </div>
             <div class="p-4 overflow-x-auto">
               <pre class="text-sm text-gray-300 font-mono"><code [innerHTML]="formatCode(defaultCode)"></code></pre>
-            </div>
-          </div>
-        </section>
-
-        <!-- Banner Colors -->
-        <section id="colors">
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-2xl font-bold text-white">Banner colors</h2>
-            <button
-              (click)="showColorsCode = !showColorsCode"
-              [class.bg-blue-600]="showColorsCode"
-              [class.bg-gray-700]="!showColorsCode"
-              class="px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-blue-700 transition-colors flex items-center gap-2"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-              </svg>
-              Code
-            </button>
-          </div>
-          <p class="text-gray-400 mb-4">Banners with different color variants.</p>
-          <div *ngIf="!showColorsCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4 relative" style="min-height: 300px;">
-            <ngf-banner color="blue" [dismissible]="true" position="top">
-              Blue banner with important information.
-            </ngf-banner>
-            <ngf-banner color="green" [dismissible]="true" position="top">
-              Green banner for success messages.
-            </ngf-banner>
-            <ngf-banner color="red" [dismissible]="true" position="top">
-              Red banner for error messages.
-            </ngf-banner>
-            <ngf-banner color="yellow" [dismissible]="true" position="top">
-              Yellow banner for warnings.
-            </ngf-banner>
-          </div>
-          <div *ngIf="showColorsCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
-              <span class="text-sm font-medium text-gray-300">banner-colors.html</span>
-              <button
-                (click)="copyToClipboard(colorsCode)"
-                class="text-gray-400 hover:text-white transition-colors"
-                title="Copy code"
-              >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                </svg>
-              </button>
-            </div>
-            <div class="p-4 overflow-x-auto">
-              <pre class="text-sm text-gray-300 font-mono"><code [innerHTML]="formatCode(colorsCode)"></code></pre>
-            </div>
-          </div>
-        </section>
-
-        <!-- Banner Positions -->
-        <section id="positions">
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-2xl font-bold text-white">Banner positions</h2>
-            <button
-              (click)="showPositionsCode = !showPositionsCode"
-              [class.bg-blue-600]="showPositionsCode"
-              [class.bg-gray-700]="!showPositionsCode"
-              class="px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-blue-700 transition-colors flex items-center gap-2"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-              </svg>
-              Code
-            </button>
-          </div>
-          <p class="text-gray-400 mb-4">Banners can be positioned at the top or bottom of the page.</p>
-          <div *ngIf="!showPositionsCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4 relative" style="min-height: 200px;">
-            <ngf-banner color="blue" [dismissible]="true" position="top">
-              Top banner example.
-            </ngf-banner>
-            <ngf-banner color="green" [dismissible]="true" position="bottom">
-              Bottom banner example.
-            </ngf-banner>
-          </div>
-          <div *ngIf="showPositionsCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
-              <span class="text-sm font-medium text-gray-300">banner-positions.html</span>
-              <button
-                (click)="copyToClipboard(positionsCode)"
-                class="text-gray-400 hover:text-white transition-colors"
-                title="Copy code"
-              >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                </svg>
-              </button>
-            </div>
-            <div class="p-4 overflow-x-auto">
-              <pre class="text-sm text-gray-300 font-mono"><code [innerHTML]="formatCode(positionsCode)"></code></pre>
             </div>
           </div>
         </section>
@@ -278,34 +160,16 @@ import { Component } from '@angular/core';
               </thead>
               <tbody class="bg-gray-900 divide-y divide-gray-700">
                 <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">bannerId</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">string</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">auto-generated</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">Unique identifier for the banner</td>
-                </tr>
-                <tr>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">color</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">'blue' | 'green' | 'red' | 'yellow' | 'purple' | 'pink'</td>
+                  <td class="px-6 py-4 text-sm text-gray-300">'blue' | 'gray' | 'green' | 'red' | 'yellow' | 'purple' | 'pink'</td>
                   <td class="px-6 py-4 text-sm text-gray-300">'blue'</td>
                   <td class="px-6 py-4 text-sm text-gray-300">Color variant of the banner</td>
-                </tr>
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">position</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">'top' | 'bottom'</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">'top'</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">Position of the banner on the page</td>
                 </tr>
                 <tr>
                   <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">dismissible</code></td>
                   <td class="px-6 py-4 text-sm text-gray-300">boolean</td>
                   <td class="px-6 py-4 text-sm text-gray-300">false</td>
                   <td class="px-6 py-4 text-sm text-gray-300">Whether the banner can be dismissed</td>
-                </tr>
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">showIcon</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">boolean</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">true</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">Whether to show the icon</td>
                 </tr>
               </tbody>
             </table>
@@ -339,32 +203,16 @@ import { Component } from '@angular/core';
 export class BannerDemoComponent {
   activeTab: 'overview' | 'examples' | 'api' = 'overview';
   showDefaultCode = false;
-  showColorsCode = false;
-  showPositionsCode = false;
 
-  defaultCode = `<ngf-banner color="blue" [dismissible]="true" position="top">
+  defaultCode = `<ngf-banner color="blue" [dismissible]="true" (onDismiss)="onDismiss()">
   New features are now available! Check out what's new.
 </ngf-banner>`;
 
-  colorsCode = `<ngf-banner color="blue" [dismissible]="true" position="top">
-  Blue banner with important information.
-</ngf-banner>
-<ngf-banner color="green" [dismissible]="true" position="top">
-  Green banner for success messages.
-</ngf-banner>
-<ngf-banner color="red" [dismissible]="true" position="top">
-  Red banner for error messages.
-</ngf-banner>
-<ngf-banner color="yellow" [dismissible]="true" position="top">
-  Yellow banner for warnings.
-</ngf-banner>`;
+  isBannerVisible = true;
 
-  positionsCode = `<ngf-banner color="blue" [dismissible]="true" position="top">
-  Top banner example.
-</ngf-banner>
-<ngf-banner color="green" [dismissible]="true" position="bottom">
-  Bottom banner example.
-</ngf-banner>`;
+  onDismiss() {
+    this.isBannerVisible = false;
+  }
 
   formatCode(code: string): string {
     return code

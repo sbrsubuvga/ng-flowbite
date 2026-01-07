@@ -19,10 +19,13 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default QR code</h2>
           <p class="text-gray-400 mb-4">Use the default QR code component to generate QR codes.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default QR code"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/qr-code/qr-code.component.ts"
+          >
             <ngf-qr-code [value]="'https://flowbite.com'" [size]="200" label="Scan this QR code"></ngf-qr-code>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

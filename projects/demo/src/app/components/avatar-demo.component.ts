@@ -69,21 +69,27 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default avatar</h2>
             <p class="text-gray-400 mb-4">Use the default avatar component to show a user profile picture.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default Avatar"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+            >
               <div class="flex gap-4 items-center">
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-5.jpg"></ngf-avatar>
                 <ngf-avatar placeholder="JD" size="lg"></ngf-avatar>
                 <ngf-avatar placeholder="AB" status="online"></ngf-avatar>
               </div>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Avatar Sizes -->
           <section id="sizes">
             <h2 class="text-2xl font-bold text-white mb-4">Avatar sizes</h2>
             <p class="text-gray-400 mb-4">The avatar component supports five different sizes: xs, sm, md, lg, and xl.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Avatar Sizes"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+            >
               <div class="flex gap-4 items-center">
                 <ngf-avatar size="xs" placeholder="XS"></ngf-avatar>
                 <ngf-avatar size="sm" placeholder="SM"></ngf-avatar>
@@ -91,15 +97,18 @@ import { Component } from '@angular/core';
                 <ngf-avatar size="lg" placeholder="LG"></ngf-avatar>
                 <ngf-avatar size="xl" placeholder="XL"></ngf-avatar>
               </div>
-            </div>
-            <app-code-example [code]="sizesCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="sizesCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Avatar with Images -->
           <section id="images">
             <h2 class="text-2xl font-bold text-white mb-4">Avatar with images</h2>
             <p class="text-gray-400 mb-4">Use the imgSrc prop to display an image in the avatar.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Avatar with Images"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+            >
               <div class="flex gap-4 items-center">
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-1.jpg" size="xs"></ngf-avatar>
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-2.jpg" size="sm"></ngf-avatar>
@@ -107,65 +116,77 @@ import { Component } from '@angular/core';
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-4.jpg" size="lg"></ngf-avatar>
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-5.jpg" size="xl"></ngf-avatar>
               </div>
-            </div>
-            <app-code-example [code]="imagesCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="imagesCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Avatar with Placeholder -->
           <section id="placeholder">
             <h2 class="text-2xl font-bold text-white mb-4">Avatar with placeholder</h2>
             <p class="text-gray-400 mb-4">When no image is provided, use the placeholder prop to show initials or text.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Avatar with Placeholder"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+            >
               <div class="flex gap-4 items-center">
                 <ngf-avatar placeholder="JD"></ngf-avatar>
                 <ngf-avatar placeholder="AB" size="lg"></ngf-avatar>
                 <ngf-avatar placeholder="CD" size="xl"></ngf-avatar>
               </div>
-            </div>
-            <app-code-example [code]="placeholderCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="placeholderCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Avatar with Status -->
           <section id="status">
             <h2 class="text-2xl font-bold text-white mb-4">Avatar with status</h2>
             <p class="text-gray-400 mb-4">Add a status indicator to show the user's online status.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Avatar with Status"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+            >
               <div class="flex gap-4 items-center">
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-1.jpg" status="online"></ngf-avatar>
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-2.jpg" status="offline"></ngf-avatar>
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-3.jpg" status="away"></ngf-avatar>
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-4.jpg" status="busy"></ngf-avatar>
               </div>
-            </div>
-            <app-code-example [code]="statusCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="statusCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Bordered Avatar -->
           <section id="bordered">
             <h2 class="text-2xl font-bold text-white mb-4">Bordered avatar</h2>
             <p class="text-gray-400 mb-4">Add a border to the avatar using the bordered prop.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Bordered Avatar"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+            >
               <div class="flex gap-4 items-center">
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-1.jpg" [bordered]="true"></ngf-avatar>
                 <ngf-avatar placeholder="JD" [bordered]="true" size="lg"></ngf-avatar>
                 <ngf-avatar placeholder="AB" [bordered]="true" status="online"></ngf-avatar>
               </div>
-            </div>
-            <app-code-example [code]="borderedCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="borderedCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Square Avatar -->
           <section id="square">
             <h2 class="text-2xl font-bold text-white mb-4">Square avatar</h2>
             <p class="text-gray-400 mb-4">Use square avatars by setting rounded to false.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Square Avatar"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+            >
               <div class="flex gap-4 items-center">
                 <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-1.jpg" [rounded]="false"></ngf-avatar>
                 <ngf-avatar placeholder="JD" [rounded]="false" size="lg"></ngf-avatar>
                 <ngf-avatar placeholder="AB" [rounded]="false" [bordered]="true"></ngf-avatar>
               </div>
-            </div>
-            <app-code-example [code]="squareCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="squareCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -189,13 +210,16 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default avatar component to show a user profile picture.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex gap-4 items-center">
+          <app-demo-wrapper
+            componentName="Default Avatar"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+          >
+            <div *ngIf="!showDefaultCode" class="flex gap-4 items-center">
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-5.jpg"></ngf-avatar>
               <ngf-avatar placeholder="JD" size="lg"></ngf-avatar>
               <ngf-avatar placeholder="AB" status="online"></ngf-avatar>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">avatar-default.html</span>
@@ -232,15 +256,18 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">The avatar component supports five different sizes: xs, sm, md, lg, and xl.</p>
-          <div *ngIf="!showSizesCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex gap-4 items-center">
+          <app-demo-wrapper
+            componentName="Avatar Sizes"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+          >
+            <div *ngIf="!showSizesCode" class="flex gap-4 items-center">
               <ngf-avatar size="xs" placeholder="XS"></ngf-avatar>
               <ngf-avatar size="sm" placeholder="SM"></ngf-avatar>
               <ngf-avatar size="md" placeholder="MD"></ngf-avatar>
               <ngf-avatar size="lg" placeholder="LG"></ngf-avatar>
               <ngf-avatar size="xl" placeholder="XL"></ngf-avatar>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showSizesCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">avatar-sizes.html</span>
@@ -277,15 +304,18 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the imgSrc prop to display an image in the avatar.</p>
-          <div *ngIf="!showImagesCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex gap-4 items-center">
+          <app-demo-wrapper
+            componentName="Avatar with Images"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+          >
+            <div *ngIf="!showImagesCode" class="flex gap-4 items-center">
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-1.jpg" size="xs"></ngf-avatar>
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-2.jpg" size="sm"></ngf-avatar>
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-3.jpg" size="md"></ngf-avatar>
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-4.jpg" size="lg"></ngf-avatar>
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-5.jpg" size="xl"></ngf-avatar>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showImagesCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">avatar-images.html</span>
@@ -322,13 +352,16 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">When no image is provided, use the placeholder prop to show initials or text.</p>
-          <div *ngIf="!showPlaceholderCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex gap-4 items-center">
+          <app-demo-wrapper
+            componentName="Avatar with Placeholder"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+          >
+            <div *ngIf="!showPlaceholderCode" class="flex gap-4 items-center">
               <ngf-avatar placeholder="JD"></ngf-avatar>
               <ngf-avatar placeholder="AB" size="lg"></ngf-avatar>
               <ngf-avatar placeholder="CD" size="xl"></ngf-avatar>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showPlaceholderCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">avatar-placeholder.html</span>
@@ -365,14 +398,17 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Add a status indicator to show the user's online status.</p>
-          <div *ngIf="!showStatusCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex gap-4 items-center">
+          <app-demo-wrapper
+            componentName="Avatar with Status"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+          >
+            <div *ngIf="!showStatusCode" class="flex gap-4 items-center">
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-1.jpg" status="online"></ngf-avatar>
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-2.jpg" status="offline"></ngf-avatar>
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-3.jpg" status="away"></ngf-avatar>
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-4.jpg" status="busy"></ngf-avatar>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showStatusCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">avatar-status.html</span>
@@ -409,13 +445,16 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Add a border to the avatar using the bordered prop.</p>
-          <div *ngIf="!showBorderedCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex gap-4 items-center">
+          <app-demo-wrapper
+            componentName="Bordered Avatar"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+          >
+            <div *ngIf="!showBorderedCode" class="flex gap-4 items-center">
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-1.jpg" [bordered]="true"></ngf-avatar>
               <ngf-avatar placeholder="JD" [bordered]="true" size="lg"></ngf-avatar>
               <ngf-avatar placeholder="AB" [bordered]="true" status="online"></ngf-avatar>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showBorderedCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">avatar-bordered.html</span>
@@ -452,13 +491,16 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use square avatars by setting rounded to false.</p>
-          <div *ngIf="!showSquareCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex gap-4 items-center">
+          <app-demo-wrapper
+            componentName="Square Avatar"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/avatar/avatar.component.ts"
+          >
+            <div *ngIf="!showSquareCode" class="flex gap-4 items-center">
               <ngf-avatar imgSrc="https://flowbite.com/docs/images/people/profile-picture-1.jpg" [rounded]="false"></ngf-avatar>
               <ngf-avatar placeholder="JD" [rounded]="false" size="lg"></ngf-avatar>
               <ngf-avatar placeholder="AB" [rounded]="false" [bordered]="true"></ngf-avatar>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showSquareCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">avatar-square.html</span>

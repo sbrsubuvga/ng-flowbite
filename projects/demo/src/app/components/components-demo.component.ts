@@ -44,7 +44,7 @@ import {
             <ngf-button color="blue" [outline]="true">Outline Button</ngf-button>
           </div>
         </div>
-        <app-code-example [code]="buttonCode"></app-code-example>
+        <app-code-syntax-wrapper [code]="buttonCode" language="html"></app-code-syntax-wrapper>
       </section>
 
       <!-- Alerts -->
@@ -61,7 +61,7 @@ import {
             </ngf-alert>
           </div>
         </div>
-        <app-code-example [code]="alertCode"></app-code-example>
+        <app-code-syntax-wrapper [code]="alertCode" language="html"></app-code-syntax-wrapper>
       </section>
 
       <!-- Badge -->
@@ -78,7 +78,7 @@ import {
             <ngf-badge color="warning">Warning</ngf-badge>
           </div>
         </div>
-        <app-code-example [code]="badgeCode"></app-code-example>
+        <app-code-syntax-wrapper [code]="badgeCode" language="html"></app-code-syntax-wrapper>
       </section>
 
       <!-- Card -->
@@ -100,7 +100,7 @@ import {
             </ngf-card>
           </div>
         </div>
-        <app-code-example [code]="cardCode"></app-code-example>
+        <app-code-syntax-wrapper [code]="cardCode" language="html"></app-code-syntax-wrapper>
       </section>
 
       <!-- Modal -->
@@ -110,7 +110,7 @@ import {
         <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
           <ngf-button color="blue" (onClick)="openModal()">Open Modal</ngf-button>
         </div>
-        <app-code-example [code]="modalCode"></app-code-example>
+        <app-code-syntax-wrapper [code]="modalCode" language="html"></app-code-syntax-wrapper>
       </section>
 
       <!-- Drawer -->
@@ -120,7 +120,7 @@ import {
         <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
           <ngf-button color="blue" (onClick)="openDrawer()">Open Drawer</ngf-button>
         </div>
-        <app-code-example [code]="drawerCode"></app-code-example>
+        <app-code-syntax-wrapper [code]="drawerCode" language="html"></app-code-syntax-wrapper>
       </section>
 
       <!-- Toast -->
@@ -135,7 +135,7 @@ import {
             <ngf-button color="blue" (onClick)="showInfoToast()">Info</ngf-button>
           </div>
         </div>
-        <app-code-example [code]="toastCode"></app-code-example>
+        <app-code-syntax-wrapper [code]="toastCode" language="html"></app-code-syntax-wrapper>
       </section>
       </div>
     </div>

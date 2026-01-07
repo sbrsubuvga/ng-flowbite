@@ -19,10 +19,15 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default speed dial</h2>
           <p class="text-gray-400 mb-4">Use the default speed dial component to show quick actions.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <ngf-speed-dial [actions]="speedDialActions" position="bottom"></ngf-speed-dial>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          <app-demo-wrapper
+            componentName="Default speed dial"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/speed-dial/speed-dial.component.ts"
+          >
+            <div style="height: 300px; position: relative;">
+              <ngf-speed-dial [actions]="speedDialActions" position="bottom"></ngf-speed-dial>
+            </div>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

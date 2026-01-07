@@ -19,16 +19,21 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default mega menu</h2>
           <p class="text-gray-400 mb-4">Use the default mega menu component to show large dropdown menus.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <ngf-mega-menu label="Company">
-              <ngf-mega-menu-column>
-                <ngf-mega-menu-item href="/about">About</ngf-mega-menu-item>
-                <ngf-mega-menu-item href="/careers">Careers</ngf-mega-menu-item>
-                <ngf-mega-menu-item href="/contact">Contact</ngf-mega-menu-item>
-              </ngf-mega-menu-column>
-            </ngf-mega-menu>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          <app-demo-wrapper
+            componentName="Default mega menu"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/mega-menu/mega-menu.component.ts"
+          >
+            <div style="height: 300px;">
+              <ngf-mega-menu label="Company">
+                <ngf-mega-menu-column>
+                  <ngf-mega-menu-item href="/about">About</ngf-mega-menu-item>
+                  <ngf-mega-menu-item href="/careers">Careers</ngf-mega-menu-item>
+                  <ngf-mega-menu-item href="/contact">Contact</ngf-mega-menu-item>
+                </ngf-mega-menu-column>
+              </ngf-mega-menu>
+            </div>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

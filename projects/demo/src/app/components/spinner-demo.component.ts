@@ -68,22 +68,28 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default spinner</h2>
             <p class="text-gray-400 mb-4">Use the default spinner component to show loading states.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default spinner"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/spinner/spinner.component.ts"
+            >
               <div class="flex flex-wrap gap-4">
                 <ngf-spinner color="blue"></ngf-spinner>
                 <ngf-spinner color="green"></ngf-spinner>
                 <ngf-spinner color="red"></ngf-spinner>
                 <ngf-spinner color="yellow"></ngf-spinner>
               </div>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Spinner Sizes -->
           <section id="sizes">
             <h2 class="text-2xl font-bold text-white mb-4">Spinner sizes</h2>
             <p class="text-gray-400 mb-4">Use the size prop to change the size of the spinner.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Spinner sizes"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/spinner/spinner.component.ts"
+            >
               <div class="flex flex-wrap items-center gap-4">
                 <ngf-spinner size="xs"></ngf-spinner>
                 <ngf-spinner size="sm"></ngf-spinner>
@@ -91,8 +97,8 @@ import { Component } from '@angular/core';
                 <ngf-spinner size="lg"></ngf-spinner>
                 <ngf-spinner size="xl"></ngf-spinner>
               </div>
-            </div>
-            <app-code-example [code]="sizesCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="sizesCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -116,14 +122,17 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default spinner component to show loading states.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default spinner"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/spinner/spinner.component.ts"
+          >
             <div class="flex flex-wrap gap-4">
               <ngf-spinner color="blue"></ngf-spinner>
               <ngf-spinner color="green"></ngf-spinner>
               <ngf-spinner color="red"></ngf-spinner>
               <ngf-spinner color="yellow"></ngf-spinner>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">spinner-default.html</span>
@@ -160,7 +169,10 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the size prop to change the size of the spinner.</p>
-          <div *ngIf="!showSizesCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Spinner sizes"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/spinner/spinner.component.ts"
+          >
             <div class="flex flex-wrap items-center gap-4">
               <ngf-spinner size="xs"></ngf-spinner>
               <ngf-spinner size="sm"></ngf-spinner>
@@ -168,7 +180,7 @@ import { Component } from '@angular/core';
               <ngf-spinner size="lg"></ngf-spinner>
               <ngf-spinner size="xl"></ngf-spinner>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showSizesCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">spinner-sizes.html</span>

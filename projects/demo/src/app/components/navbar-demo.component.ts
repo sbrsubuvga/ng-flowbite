@@ -75,14 +75,18 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default navbar</h2>
             <p class="text-gray-400 mb-4">Use the default navbar component to show navigation links.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default navbar"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/navbar/navbar.component.ts"
+              [padding]="false"
+            >
               <ngf-navbar brandText="Flowbite">
                 <ngf-navbar-item routerLink="/">Home</ngf-navbar-item>
                 <ngf-navbar-item routerLink="/components">Components</ngf-navbar-item>
                 <ngf-navbar-item routerLink="/forms">Forms</ngf-navbar-item>
               </ngf-navbar>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -106,13 +110,17 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default navbar component to show navigation links.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default navbar"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/navbar/navbar.component.ts"
+            [padding]="false"
+          >
             <ngf-navbar brandText="Flowbite">
               <ngf-navbar-item routerLink="/">Home</ngf-navbar-item>
               <ngf-navbar-item routerLink="/components">Components</ngf-navbar-item>
               <ngf-navbar-item routerLink="/forms">Forms</ngf-navbar-item>
             </ngf-navbar>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">navbar-default.html</span>

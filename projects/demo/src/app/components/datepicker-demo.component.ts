@@ -20,10 +20,13 @@ import { FormControl } from '@angular/forms';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default datepicker</h2>
           <p class="text-gray-400 mb-4">Use the default datepicker component to select dates.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default datepicker"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/datepicker/datepicker.component.ts"
+          >
             <ngf-datepicker [formControl]="dateControl" placeholder="Select date"></ngf-datepicker>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

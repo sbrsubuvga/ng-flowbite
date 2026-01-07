@@ -59,8 +59,6 @@ import { Component } from '@angular/core';
             <li>Separator icons between items</li>
             <li>Support for href and routerLink navigation</li>
             <li>Current page styling (non-clickable)</li>
-            <li>Solid breadcrumb variant with background colors</li>
-            <li>Multiple color variants</li>
             <li>Accessible with ARIA attributes</li>
             <li>Dark mode support</li>
           </ul>
@@ -71,33 +69,13 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default breadcrumb</h2>
             <p class="text-gray-400 mb-4">Use the default breadcrumb component to show navigation hierarchy.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default Breadcrumb"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/breadcrumb/breadcrumb.component.ts"
+            >
               <ngf-breadcrumb [items]="breadcrumbItems"></ngf-breadcrumb>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
-          </section>
-
-          <!-- Solid Breadcrumb -->
-          <section id="solid">
-            <h2 class="text-2xl font-bold text-white mb-4">Solid breadcrumb</h2>
-            <p class="text-gray-400 mb-4">Breadcrumb with solid background and border.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-              <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="default"></ngf-breadcrumb>
-            </div>
-            <app-code-example [code]="solidCode"></app-code-example>
-          </section>
-
-          <!-- Solid Breadcrumb with Colors -->
-          <section id="solid-colors">
-            <h2 class="text-2xl font-bold text-white mb-4">Solid breadcrumb with colors</h2>
-            <p class="text-gray-400 mb-4">Solid breadcrumbs with different color variants.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4">
-              <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="info"></ngf-breadcrumb>
-              <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="success"></ngf-breadcrumb>
-              <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="warning"></ngf-breadcrumb>
-              <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="failure"></ngf-breadcrumb>
-            </div>
-            <app-code-example [code]="solidColorsCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -121,9 +99,12 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default breadcrumb component to show navigation hierarchy.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default Breadcrumb"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/breadcrumb/breadcrumb.component.ts"
+          >
             <ngf-breadcrumb [items]="breadcrumbItems"></ngf-breadcrumb>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">breadcrumb-default.html</span>
@@ -139,87 +120,6 @@ import { Component } from '@angular/core';
             </div>
             <div class="p-4 overflow-x-auto">
               <pre class="text-sm text-gray-300 font-mono"><code [innerHTML]="formatCode(defaultCode)"></code></pre>
-            </div>
-          </div>
-        </section>
-
-        <!-- Solid Breadcrumb -->
-        <section id="solid">
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-2xl font-bold text-white">Solid breadcrumb</h2>
-            <button
-              (click)="showSolidCode = !showSolidCode"
-              [class.bg-blue-600]="showSolidCode"
-              [class.bg-gray-700]="!showSolidCode"
-              class="px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-blue-700 transition-colors flex items-center gap-2"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-              </svg>
-              Code
-            </button>
-          </div>
-          <p class="text-gray-400 mb-4">Breadcrumb with solid background and border.</p>
-          <div *ngIf="!showSolidCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="default"></ngf-breadcrumb>
-          </div>
-          <div *ngIf="showSolidCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
-              <span class="text-sm font-medium text-gray-300">breadcrumb-solid.html</span>
-              <button
-                (click)="copyToClipboard(solidCode)"
-                class="text-gray-400 hover:text-white transition-colors"
-                title="Copy code"
-              >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                </svg>
-              </button>
-            </div>
-            <div class="p-4 overflow-x-auto">
-              <pre class="text-sm text-gray-300 font-mono"><code [innerHTML]="formatCode(solidCode)"></code></pre>
-            </div>
-          </div>
-        </section>
-
-        <!-- Solid Breadcrumb with Colors -->
-        <section id="solid-colors">
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-2xl font-bold text-white">Solid breadcrumb with colors</h2>
-            <button
-              (click)="showSolidColorsCode = !showSolidColorsCode"
-              [class.bg-blue-600]="showSolidColorsCode"
-              [class.bg-gray-700]="!showSolidColorsCode"
-              class="px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-blue-700 transition-colors flex items-center gap-2"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-              </svg>
-              Code
-            </button>
-          </div>
-          <p class="text-gray-400 mb-4">Solid breadcrumbs with different color variants.</p>
-          <div *ngIf="!showSolidColorsCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700 space-y-4">
-            <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="info"></ngf-breadcrumb>
-            <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="success"></ngf-breadcrumb>
-            <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="warning"></ngf-breadcrumb>
-            <ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="failure"></ngf-breadcrumb>
-          </div>
-          <div *ngIf="showSolidColorsCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
-              <span class="text-sm font-medium text-gray-300">breadcrumb-solid-colors.html</span>
-              <button
-                (click)="copyToClipboard(solidColorsCode)"
-                class="text-gray-400 hover:text-white transition-colors"
-                title="Copy code"
-              >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                </svg>
-              </button>
-            </div>
-            <div class="p-4 overflow-x-auto">
-              <pre class="text-sm text-gray-300 font-mono"><code [innerHTML]="formatCode(solidColorsCode)"></code></pre>
             </div>
           </div>
         </section>
@@ -253,18 +153,6 @@ import { Component } from '@angular/core';
                   <td class="px-6 py-4 text-sm text-gray-300">BreadcrumbItem[]</td>
                   <td class="px-6 py-4 text-sm text-gray-300">[]</td>
                   <td class="px-6 py-4 text-sm text-gray-300">Array of breadcrumb items</td>
-                </tr>
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">color</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">'default' | 'info' | 'failure' | 'success' | 'warning' | 'primary'</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">'default'</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">Color variant of the breadcrumb (affects link colors and solid background)</td>
-                </tr>
-                <tr>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300"><code class="text-blue-400">solid</code></td>
-                  <td class="px-6 py-4 text-sm text-gray-300">boolean</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">false</td>
-                  <td class="px-6 py-4 text-sm text-gray-300">Whether to show solid background with border</td>
                 </tr>
               </tbody>
             </table>
@@ -308,8 +196,6 @@ import { Component } from '@angular/core';
 export class BreadcrumbDemoComponent {
   activeTab: 'overview' | 'examples' | 'api' = 'overview';
   showDefaultCode = false;
-  showSolidCode = false;
-  showSolidColorsCode = false;
   breadcrumbItems = [
     { label: 'Home', routerLink: '/' },
     { label: 'Components', routerLink: '/components' },
@@ -323,13 +209,6 @@ breadcrumbItems = [
   { label: 'Components', routerLink: '/components' },
   { label: 'Breadcrumb' }
 ];`;
-
-  solidCode = `<ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="default"></ngf-breadcrumb>`;
-
-  solidColorsCode = `<ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="info"></ngf-breadcrumb>
-<ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="success"></ngf-breadcrumb>
-<ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="warning"></ngf-breadcrumb>
-<ngf-breadcrumb [items]="breadcrumbItems" [solid]="true" color="failure"></ngf-breadcrumb>`;
 
   formatCode(code: string): string {
     return code

@@ -69,14 +69,17 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default rating</h2>
             <p class="text-gray-400 mb-4">Use the default rating component to show star ratings.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default rating"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/rating/rating.component.ts"
+            >
               <div class="space-y-4">
                 <ngf-rating [rating]="4" [readonly]="true"></ngf-rating>
                 <ngf-rating [rating]="3.5" [readonly]="true"></ngf-rating>
                 <ngf-rating [rating]="currentRating" [readonly]="false" [showText]="true" (ratingChange)="onRatingChange($event)"></ngf-rating>
               </div>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -100,13 +103,16 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default rating component to show star ratings.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default rating"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/rating/rating.component.ts"
+          >
             <div class="space-y-4">
               <ngf-rating [rating]="4" [readonly]="true"></ngf-rating>
               <ngf-rating [rating]="3.5" [readonly]="true"></ngf-rating>
               <ngf-rating [rating]="currentRating" [readonly]="false" [showText]="true" (ratingChange)="onRatingChange($event)"></ngf-rating>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">rating-default.html</span>

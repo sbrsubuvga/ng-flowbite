@@ -71,7 +71,10 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default badges</h2>
             <p class="text-gray-400 mb-4">Use the default badge component to show labels or counts.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default Badges"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+            >
               <div class="flex flex-wrap gap-2">
                 <ngf-badge color="brand">Brand</ngf-badge>
                 <ngf-badge color="alternative">Alternative</ngf-badge>
@@ -80,15 +83,18 @@ import { Component } from '@angular/core';
                 <ngf-badge color="success">Success</ngf-badge>
                 <ngf-badge color="warning">Warning</ngf-badge>
               </div>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Bordered Badge -->
           <section id="border">
             <h2 class="text-2xl font-bold text-white mb-4">Bordered badges</h2>
             <p class="text-gray-400 mb-4">Badges with borders.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Bordered Badges"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+            >
               <div class="flex flex-wrap gap-2">
                 <ngf-badge color="brand" [border]="true">Brand</ngf-badge>
                 <ngf-badge color="alternative" [border]="true">Alternative</ngf-badge>
@@ -97,15 +103,18 @@ import { Component } from '@angular/core';
                 <ngf-badge color="success" [border]="true">Success</ngf-badge>
                 <ngf-badge color="warning" [border]="true">Warning</ngf-badge>
               </div>
-            </div>
-            <app-code-example [code]="borderedCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="borderedCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Large Badge -->
           <section id="large">
             <h2 class="text-2xl font-bold text-white mb-4">Large badges</h2>
             <p class="text-gray-400 mb-4">Larger badges with more padding.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Large Badges"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+            >
               <div class="flex flex-wrap gap-2">
                 <ngf-badge color="brand" size="lg">Brand</ngf-badge>
                 <ngf-badge color="alternative" size="lg">Alternative</ngf-badge>
@@ -114,15 +123,18 @@ import { Component } from '@angular/core';
                 <ngf-badge color="success" size="lg">Success</ngf-badge>
                 <ngf-badge color="warning" size="lg">Warning</ngf-badge>
               </div>
-            </div>
-            <app-code-example [code]="largeCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="largeCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Large Bordered Badge -->
           <section id="large-bordered">
             <h2 class="text-2xl font-bold text-white mb-4">Large bordered badges</h2>
             <p class="text-gray-400 mb-4">Large badges with ring borders.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Large Bordered Badges"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+            >
               <div class="flex flex-wrap gap-2">
                 <ngf-badge color="brand" size="lg" [useRing]="true">Brand</ngf-badge>
                 <ngf-badge color="alternative" size="lg" [useRing]="true">Alternative</ngf-badge>
@@ -131,15 +143,18 @@ import { Component } from '@angular/core';
                 <ngf-badge color="success" size="lg" [useRing]="true">Success</ngf-badge>
                 <ngf-badge color="warning" size="lg" [useRing]="true">Warning</ngf-badge>
               </div>
-            </div>
-            <app-code-example [code]="largeBorderedCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="largeBorderedCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Pill Badge -->
           <section id="pill">
             <h2 class="text-2xl font-bold text-white mb-4">Pill badges</h2>
             <p class="text-gray-400 mb-4">Pill-shaped badges with rounded-full.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Pill Badges"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+            >
               <div class="flex flex-wrap gap-2">
                 <ngf-badge color="brand" [pill]="true">Brand</ngf-badge>
                 <ngf-badge color="alternative" [pill]="true">Alternative</ngf-badge>
@@ -148,15 +163,18 @@ import { Component } from '@angular/core';
                 <ngf-badge color="success" [pill]="true">Success</ngf-badge>
                 <ngf-badge color="warning" [pill]="true">Warning</ngf-badge>
               </div>
-            </div>
-            <app-code-example [code]="pillCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="pillCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Pill Bordered Badge -->
           <section id="pill-bordered">
             <h2 class="text-2xl font-bold text-white mb-4">Pill bordered badges</h2>
             <p class="text-gray-400 mb-4">Pill badges with borders.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Pill Bordered Badges"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+            >
               <div class="flex flex-wrap gap-2">
                 <ngf-badge color="brand" [pill]="true" [border]="true">Brand</ngf-badge>
                 <ngf-badge color="alternative" [pill]="true" [border]="true">Alternative</ngf-badge>
@@ -165,8 +183,8 @@ import { Component } from '@angular/core';
                 <ngf-badge color="success" [pill]="true" [border]="true">Success</ngf-badge>
                 <ngf-badge color="warning" [pill]="true" [border]="true">Warning</ngf-badge>
               </div>
-            </div>
-            <app-code-example [code]="pillBorderedCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="pillBorderedCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -190,8 +208,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the default badge component to show labels or counts.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex flex-wrap gap-2">
+          <app-demo-wrapper
+            componentName="Default Badges"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+          >
+            <div *ngIf="!showDefaultCode" class="flex flex-wrap gap-2">
               <ngf-badge color="brand">Brand</ngf-badge>
               <ngf-badge color="alternative">Alternative</ngf-badge>
               <ngf-badge color="gray">Gray</ngf-badge>
@@ -199,7 +220,7 @@ import { Component } from '@angular/core';
               <ngf-badge color="success">Success</ngf-badge>
               <ngf-badge color="warning">Warning</ngf-badge>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">badge-default.html</span>
@@ -236,8 +257,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Badges with borders.</p>
-          <div *ngIf="!showBorderedCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex flex-wrap gap-2">
+          <app-demo-wrapper
+            componentName="Bordered Badges"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+          >
+            <div *ngIf="!showBorderedCode" class="flex flex-wrap gap-2">
               <ngf-badge color="brand" [border]="true">Brand</ngf-badge>
               <ngf-badge color="alternative" [border]="true">Alternative</ngf-badge>
               <ngf-badge color="gray" [border]="true">Gray</ngf-badge>
@@ -245,7 +269,7 @@ import { Component } from '@angular/core';
               <ngf-badge color="success" [border]="true">Success</ngf-badge>
               <ngf-badge color="warning" [border]="true">Warning</ngf-badge>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showBorderedCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">badge-bordered.html</span>
@@ -282,8 +306,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Larger badges with more padding.</p>
-          <div *ngIf="!showLargeCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex flex-wrap gap-2">
+          <app-demo-wrapper
+            componentName="Large Badges"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+          >
+            <div *ngIf="!showLargeCode" class="flex flex-wrap gap-2">
               <ngf-badge color="brand" size="lg">Brand</ngf-badge>
               <ngf-badge color="alternative" size="lg">Alternative</ngf-badge>
               <ngf-badge color="gray" size="lg">Gray</ngf-badge>
@@ -291,7 +318,7 @@ import { Component } from '@angular/core';
               <ngf-badge color="success" size="lg">Success</ngf-badge>
               <ngf-badge color="warning" size="lg">Warning</ngf-badge>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showLargeCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">badge-large.html</span>
@@ -328,8 +355,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Large badges with ring borders.</p>
-          <div *ngIf="!showLargeBorderedCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex flex-wrap gap-2">
+          <app-demo-wrapper
+            componentName="Large Bordered Badges"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+          >
+            <div *ngIf="!showLargeBorderedCode" class="flex flex-wrap gap-2">
               <ngf-badge color="brand" size="lg" [useRing]="true">Brand</ngf-badge>
               <ngf-badge color="alternative" size="lg" [useRing]="true">Alternative</ngf-badge>
               <ngf-badge color="gray" size="lg" [useRing]="true">Gray</ngf-badge>
@@ -337,7 +367,7 @@ import { Component } from '@angular/core';
               <ngf-badge color="success" size="lg" [useRing]="true">Success</ngf-badge>
               <ngf-badge color="warning" size="lg" [useRing]="true">Warning</ngf-badge>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showLargeBorderedCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">badge-large-bordered.html</span>
@@ -374,8 +404,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Pill-shaped badges with rounded-full.</p>
-          <div *ngIf="!showPillCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex flex-wrap gap-2">
+          <app-demo-wrapper
+            componentName="Pill Badges"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+          >
+            <div *ngIf="!showPillCode" class="flex flex-wrap gap-2">
               <ngf-badge color="brand" [pill]="true">Brand</ngf-badge>
               <ngf-badge color="alternative" [pill]="true">Alternative</ngf-badge>
               <ngf-badge color="gray" [pill]="true">Gray</ngf-badge>
@@ -383,7 +416,7 @@ import { Component } from '@angular/core';
               <ngf-badge color="success" [pill]="true">Success</ngf-badge>
               <ngf-badge color="warning" [pill]="true">Warning</ngf-badge>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showPillCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">badge-pill.html</span>
@@ -420,8 +453,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Pill badges with borders.</p>
-          <div *ngIf="!showPillBorderedCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex flex-wrap gap-2">
+          <app-demo-wrapper
+            componentName="Pill Bordered Badges"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+          >
+            <div *ngIf="!showPillBorderedCode" class="flex flex-wrap gap-2">
               <ngf-badge color="brand" [pill]="true" [border]="true">Brand</ngf-badge>
               <ngf-badge color="alternative" [pill]="true" [border]="true">Alternative</ngf-badge>
               <ngf-badge color="gray" [pill]="true" [border]="true">Gray</ngf-badge>
@@ -429,7 +465,7 @@ import { Component } from '@angular/core';
               <ngf-badge color="success" [pill]="true" [border]="true">Success</ngf-badge>
               <ngf-badge color="warning" [pill]="true" [border]="true">Warning</ngf-badge>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showPillBorderedCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">badge-pill-bordered.html</span>
@@ -466,8 +502,11 @@ import { Component } from '@angular/core';
             </button>
           </div>
           <p class="text-gray-400 mb-4">Badges styled as links with hover states.</p>
-          <div *ngIf="!showLinksCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <div class="flex flex-wrap gap-2">
+          <app-demo-wrapper
+            componentName="Badges as Links"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/badge/badge.component.ts"
+          >
+            <div *ngIf="!showLinksCode" class="flex flex-wrap gap-2">
               <a href="#" class="bg-brand-softer hover:bg-brand-soft border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded inline-flex items-center">Brand</a>
               <a href="#" class="bg-neutral-primary-soft hover:bg-neutral-secondary-medium border border-default text-heading text-xs font-medium px-1.5 py-0.5 rounded inline-flex items-center">Alternative</a>
               <a href="#" class="bg-neutral-secondary-medium hover:bg-neutral-tertiary-medium border border-default-medium text-heading text-xs font-medium px-1.5 py-0.5 rounded inline-flex items-center">Gray</a>
@@ -475,7 +514,7 @@ import { Component } from '@angular/core';
               <a href="#" class="bg-success-soft hover:bg-success-medium border border-success-subtle text-fg-success-strong text-xs font-medium px-1.5 py-0.5 rounded inline-flex items-center">Success</a>
               <a href="#" class="bg-warning-soft hover:bg-warning-medium border border-warning-subtle text-warning text-xs font-medium px-1.5 py-0.5 rounded inline-flex items-center">Warning</a>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showLinksCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">badge-links.html</span>

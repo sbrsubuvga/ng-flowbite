@@ -70,7 +70,10 @@ import { Component } from '@angular/core';
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default accordion</h2>
             <p class="text-gray-400 mb-4">Use the default type to collapse every other child element when expanding a single one.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default Accordion"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/accordion/accordion.component.ts"
+            >
               <ngf-accordion>
                 <ngf-accordion-item [isOpen]="true">
                   <div ngfAccordionHeader>What is Flowbite?</div>
@@ -99,15 +102,18 @@ import { Component } from '@angular/core';
                   </div>
                 </ngf-accordion-item>
               </ngf-accordion>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Separated Cards -->
           <section id="separated">
             <h2 class="text-2xl font-bold text-white mb-4">Separated cards</h2>
             <p class="text-gray-400 mb-4">Use the separated type to show each accordion item as a separate card with spacing between them.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Separated Cards"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/accordion/accordion.component.ts"
+            >
               <ngf-accordion [type]="'separated'">
                 <ngf-accordion-item [isOpen]="true">
                   <div ngfAccordionHeader>What is Flowbite?</div>
@@ -136,15 +142,18 @@ import { Component } from '@angular/core';
                   </div>
                 </ngf-accordion-item>
               </ngf-accordion>
-            </div>
-            <app-code-example [code]="separatedCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="separatedCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Always Open -->
           <section id="always-open">
             <h2 class="text-2xl font-bold text-white mb-4">Always open</h2>
             <p class="text-gray-400 mb-4">Use the always-open type to keep multiple elements open at the same time.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Always Open"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/accordion/accordion.component.ts"
+            >
               <ngf-accordion [type]="'always-open'">
                 <ngf-accordion-item>
                   <div ngfAccordionHeader>What is Flowbite?</div>
@@ -165,15 +174,18 @@ import { Component } from '@angular/core';
                   </div>
                 </ngf-accordion-item>
               </ngf-accordion>
-            </div>
-            <app-code-example [code]="alwaysOpenCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="alwaysOpenCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Flush Accordion -->
           <section id="flush">
             <h2 class="text-2xl font-bold text-white mb-4">Flush accordion</h2>
             <p class="text-gray-400 mb-4">Use the flush variant to remove borders and rounded corners for a cleaner look.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Flush Accordion"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/accordion/accordion.component.ts"
+            >
               <ngf-accordion [type]="'flush'">
                 <ngf-accordion-item [isOpen]="false">
                   <div ngfAccordionHeader>What is Flowbite?</div>
@@ -194,8 +206,8 @@ import { Component } from '@angular/core';
                   </div>
                 </ngf-accordion-item>
               </ngf-accordion>
-            </div>
-            <app-code-example [code]="flushCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="flushCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>

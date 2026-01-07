@@ -19,14 +19,17 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default timeline</h2>
           <p class="text-gray-400 mb-4">Use the default timeline component to show chronological events.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default timeline"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/timeline/timeline.component.ts"
+          >
             <ngf-timeline>
               <ngf-timeline-item [time]="'February 2022'" [title]="'Application UI code in Tailwind CSS'" [content]="'Get access to over 20+ pages including a dashboard layout.'"></ngf-timeline-item>
               <ngf-timeline-item [time]="'March 2022'" [title]="'Marketing UI design in Figma'" [content]="'All of the pages and components are first designed in Figma.'"></ngf-timeline-item>
               <ngf-timeline-item [time]="'April 2022'" [title]="'E-Commerce UI code in Tailwind CSS'" [content]="'Get started with dozens of web components and interactive elements.'"></ngf-timeline-item>
             </ngf-timeline>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

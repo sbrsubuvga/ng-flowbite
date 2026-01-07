@@ -75,38 +75,47 @@ import { NgfDrawerService, NgfDrawerConfig, NgfActiveDrawer } from '@ng-flowbite
           <section id="default">
             <h2 class="text-2xl font-bold text-white mb-4">Default drawer</h2>
             <p class="text-gray-400 mb-4">Use the drawer service to open side panels programmatically from the right side.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Default drawer"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/drawer/drawer.component.ts"
+            >
               <ngf-button color="blue" (onClick)="openDrawer('end')">Open Drawer (Right)</ngf-button>
-            </div>
-            <app-code-example [code]="defaultCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Drawer Positions -->
           <section id="positions">
             <h2 class="text-2xl font-bold text-white mb-4">Drawer positions</h2>
             <p class="text-gray-400 mb-4">Open drawers from different positions: start (left), end (right), top, or bottom.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Drawer positions"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/drawer/drawer.component.ts"
+            >
               <div class="flex flex-wrap gap-4">
                 <ngf-button color="blue" (onClick)="openDrawer('start')">Open from Left</ngf-button>
                 <ngf-button color="blue" (onClick)="openDrawer('end')">Open from Right</ngf-button>
                 <ngf-button color="blue" (onClick)="openDrawer('top')">Open from Top</ngf-button>
                 <ngf-button color="blue" (onClick)="openDrawer('bottom')">Open from Bottom</ngf-button>
               </div>
-            </div>
-            <app-code-example [code]="positionsCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="positionsCode" language="html"></app-code-syntax-wrapper>
           </section>
 
           <!-- Backdrop Options -->
           <section id="backdrop">
             <h2 class="text-2xl font-bold text-white mb-4">Backdrop options</h2>
             <p class="text-gray-400 mb-4">Control whether the drawer can be closed by clicking the backdrop.</p>
-            <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+            <app-demo-wrapper
+              componentName="Backdrop options"
+              githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/drawer/drawer.component.ts"
+            >
               <div class="flex flex-wrap gap-4">
                 <ngf-button color="blue" (onClick)="openDrawerWithBackdrop(true)">With Backdrop (Clickable)</ngf-button>
                 <ngf-button color="blue" (onClick)="openDrawerWithBackdrop(false)">Without Backdrop</ngf-button>
               </div>
-            </div>
-            <app-code-example [code]="backdropCode"></app-code-example>
+            </app-demo-wrapper>
+            <app-code-syntax-wrapper [code]="backdropCode" language="html"></app-code-syntax-wrapper>
           </section>
         </div>
       </div>
@@ -130,9 +139,12 @@ import { NgfDrawerService, NgfDrawerConfig, NgfActiveDrawer } from '@ng-flowbite
             </button>
           </div>
           <p class="text-gray-400 mb-4">Use the drawer service to open side panels programmatically from the right side.</p>
-          <div *ngIf="!showDefaultCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default drawer"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/drawer/drawer.component.ts"
+          >
             <ngf-button color="blue" (onClick)="openDrawer('end')">Open Drawer (Right)</ngf-button>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showDefaultCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">drawer-default.ts</span>
@@ -169,14 +181,17 @@ import { NgfDrawerService, NgfDrawerConfig, NgfActiveDrawer } from '@ng-flowbite
             </button>
           </div>
           <p class="text-gray-400 mb-4">Open drawers from different positions: start (left), end (right), top, or bottom.</p>
-          <div *ngIf="!showPositionsCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Drawer positions"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/drawer/drawer.component.ts"
+          >
             <div class="flex flex-wrap gap-4">
               <ngf-button color="blue" (onClick)="openDrawer('start')">Open from Left</ngf-button>
               <ngf-button color="blue" (onClick)="openDrawer('end')">Open from Right</ngf-button>
               <ngf-button color="blue" (onClick)="openDrawer('top')">Open from Top</ngf-button>
               <ngf-button color="blue" (onClick)="openDrawer('bottom')">Open from Bottom</ngf-button>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showPositionsCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">drawer-positions.ts</span>
@@ -213,12 +228,15 @@ import { NgfDrawerService, NgfDrawerConfig, NgfActiveDrawer } from '@ng-flowbite
             </button>
           </div>
           <p class="text-gray-400 mb-4">Control whether the drawer can be closed by clicking the backdrop.</p>
-          <div *ngIf="!showBackdropCode" class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Backdrop options"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/drawer/drawer.component.ts"
+          >
             <div class="flex flex-wrap gap-4">
               <ngf-button color="blue" (onClick)="openDrawerWithBackdrop(true)">With Backdrop (Clickable)</ngf-button>
               <ngf-button color="blue" (onClick)="openDrawerWithBackdrop(false)">Without Backdrop</ngf-button>
             </div>
-          </div>
+          </app-demo-wrapper>
           <div *ngIf="showBackdropCode" class="mb-4 bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
             <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
               <span class="text-sm font-medium text-gray-300">drawer-backdrop.ts</span>

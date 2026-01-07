@@ -19,7 +19,10 @@ import { Component } from '@angular/core';
         <section id="default">
           <h2 class="text-2xl font-bold text-white mb-4">Default chat bubble</h2>
           <p class="text-gray-400 mb-4">Use the default chat bubble component to show messages.</p>
-          <div class="mb-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
+          <app-demo-wrapper
+            componentName="Default chat bubble"
+            githubLink="https://github.com/themesberg/flowbite-angular/blob/main/projects/ng-flowbite/src/lib/components/chat-bubble/chat-bubble.component.ts"
+          >
             <div class="space-y-4">
               <ngf-chat-bubble position="start" [time]="'10:00 AM'" color="blue">
                 Hello! How can I help you today?
@@ -28,8 +31,8 @@ import { Component } from '@angular/core';
                 I need help with my account.
               </ngf-chat-bubble>
             </div>
-          </div>
-          <app-code-example [code]="defaultCode"></app-code-example>
+          </app-demo-wrapper>
+          <app-code-syntax-wrapper [code]="defaultCode" language="html"></app-code-syntax-wrapper>
         </section>
       </div>
     </div>

@@ -14,6 +14,8 @@ import { ComponentsDemoComponent, ModalContentComponent, DrawerContentComponent 
 import { FormsDemoComponent } from './forms/forms-demo.component';
 import { TypographyDemoComponent } from './typography/typography-demo.component';
 import { CodeExampleComponent } from './shared/code-example/code-example.component';
+import { DemoWrapperComponent } from './shared/components/demo-wrapper/demo-wrapper.component';
+import { CodeSyntaxWrapperComponent } from './shared/components/code-syntax-wrapper/code-syntax-wrapper.component';
 
 // Component demos
 import { AccordionDemoComponent } from './components/accordion-demo.component';
@@ -118,6 +120,8 @@ const routes: Routes = [
     FormsDemoComponent,
     TypographyDemoComponent,
     CodeExampleComponent,
+    DemoWrapperComponent,
+    CodeSyntaxWrapperComponent,
     // Component demos
     AccordionDemoComponent,
     AlertsDemoComponent,
